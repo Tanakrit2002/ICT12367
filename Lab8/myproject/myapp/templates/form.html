@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}
+แบบฟอร์ม
+{% endblock %}
+
+{% block content %}
+
+<style>
+
+/* Banner */
+.hero{
+    background:url("https://picsum.photos/1200/500") center/cover no-repeat;
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+/* กล่องฟอร์ม */
+.form-container{
+    width:400px;
+    margin:40px auto;
+    background:white;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+/* หัวฟอร์ม */
+.form-header{
+    background:#1e73d8;
+    color:white;
+    padding:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* เนื้อฟอร์ม */
+.form-body{
+    padding:20px;
+}
+
+.form-body label{
+    display:block;
+    margin-top:10px;
+}
+
+.form-body input{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:3px;
+}
+
+/* ปุ่ม */
+.btn{
+    margin-top:15px;
+}
+
+.btn button{
+    padding:8px 12px;
+    border:none;
+    border-radius:3px;
+    cursor:pointer;
+}
+
+.save{
+    background:#28a745;
+    color:white;
+}
+
+.reset{
+    background:#dc3545;
+    color:white;
+}
+
+</style>
+
+
+<!-- Banner -->
+<div class="hero">
+    ยินดีต้อนรับสู่เว็บไซต์ของรายวิชา ICT12367
+</div>
+
+
+<!-- Form -->
+<div class="form-container">
+
+    <div class="form-header">
+        แบบฟอร์มบันทึกข้อมูลประชากร
+    </div>
+
+    <div class="form-body">
+
+        <label>ชื่อประชากร</label>
+        <input type="text" placeholder="กรุณากรอกชื่อ-นามสกุล">
+
+        <label>อายุ</label>
+        <input type="number" placeholder="กรอกข้อมูลอายุเป็นตัวเลข">
+
+        <div class="btn">
+            <button class="save">ลงทะเบียน</button>
+            <button class="reset">ล้างข้อมูล</button>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

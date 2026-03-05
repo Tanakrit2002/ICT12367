@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}ICT12367{% endblock %}</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background:#f2f2f2;
+        }
+
+        nav{
+            background:#333;
+            color:white;
+            padding:15px;
+            display:flex;
+            justify-content:space-between;
+        }
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:15px;
+        }
+
+        .hero{
+            background:url("https://picsum.photos/1200/400") no-repeat center;
+             background-size:cover;
+             background-position:center;
+             height:250px;
+             display:flex;
+             justify-content:center;
+             align-items:center;
+             color:white;
+             font-size:30px;
+             font-weight:bold;
+        }
+        .hero h1{
+            background:rgba(0,0,0,0.5);
+            display:inline-block;
+            padding:10px 20px;
+        }
+
+        .section{
+            background:white;
+            margin:20px;
+            padding:20px;
+            border-radius:5px;
+        }
+
+        footer{
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div><strong>ICT12367 SPU</strong></div>
+        <div>
+            <a href="/">หน้าแรก</a>
+            <a href="/about">เกี่ยวกับเรา</a>
+            <a href="/form">แบบฟอร์ม</a>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        © 2024 ICT12367 SPU | Information Technology
+    </footer>
+
+</body>
+</html>

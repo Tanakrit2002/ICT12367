@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}
+เกี่ยวกับเรา
+{% endblock %}
+
+{% block content %}
+
+<style>
+
+.hero{
+    background:url("https://picsum.photos/1200/500") center/cover no-repeat;
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    text-align:center;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    margin-top:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+}
+
+</style>
+
+
+<div class="hero">
+    ยินดีต้อนรับสู่เว็บไซต์ของรายวิชา ICT12367
+</div>
+
+<div class="container">
+
+    <h2>ภาพกิจกรรม</h2>
+
+    <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Delectus nemo dolorem corporis nobis ad aliquam ex beatae a eveniet fugiat deserunt?
+    </p>
+
+    <div class="gallery">
+
+        <img src="https://picsum.photos/400/250?1">
+        <img src="https://picsum.photos/400/250?2">
+        <img src="https://picsum.photos/400/250?3">
+
+        <img src="https://picsum.photos/400/250?4">
+        <img src="https://picsum.photos/400/250?5">
+        <img src="https://picsum.photos/400/250?6">
+
+        <img src="https://picsum.photos/400/250?7">
+        <img src="https://picsum.photos/400/250?8">
+        <img src="https://picsum.photos/400/250?9">
+
+    </div>
+
+</div>
+
+{% endblock %}
