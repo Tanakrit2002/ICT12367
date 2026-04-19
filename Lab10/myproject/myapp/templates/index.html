@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>หน้าหลักของเว็บไซต์</title>
+{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+
+  <!-- ข้อความ Banner -->
+  <p class="text-primary fw-bold">
+    ยินดีต้อนรับเข้าสู่รายวิชา ICT12367 การใช้กรอบงานสำหรับการพัฒนาเว็บแอปพลิเคชันเพื่อความมั่นคงปลอดภัย
+  </p>
+
+  <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">รหัสประชากร</th>
+      <th scope="col">ชื่อประชากร</th>
+      <th scope="col">อายุ</th>
+      <th scope="col">เเก้ไข</th>
+      <th scope="col">ลบ</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for person in all_person %}
+    <tr>
+      <th scope="row">{{ person.id }}</th>
+      <td>{{ person.name }}</td>
+      <td>{{ person.age }}</td>
+      <td><a href="#" class="btn btn-warning">เเก้ไข</a></td>
+      <td><a href="#" class="btn btn-danger">ลบ</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+</div>
+
+{% endblock %}
